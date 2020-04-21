@@ -8,6 +8,7 @@ class NacosRegisterApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
