@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @name NacosConfigCenter
  */
 
-@Component
+//@Component
 @Getter
 public class NacosConfigCenter {
 
