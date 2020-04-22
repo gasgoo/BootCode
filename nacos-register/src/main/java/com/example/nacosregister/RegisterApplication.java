@@ -1,13 +1,14 @@
-package com.client.consumer;
+package com.example.nacosregister;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class NacosConsumerApplication {
+public class RegisterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosConsumerApplication.class, args);
+        SpringApplication.run(RegisterApplication.class, args);
     }
 
 }
