@@ -1,7 +1,10 @@
 package com.example.nacosregister.config;
 
-import com.alibaba.nacos.api.config.annotation.NacosValue;
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,11 +13,12 @@ import org.springframework.stereotype.Component;
  * @name NacosConfigCenter
  */
 
-//@Component
+@RefreshScope
 @Getter
+@Component
 public class NacosConfigCenter {
 
-    @NacosValue(value = "${nacos.test.value}",autoRefreshed = true)
+    @Value(value = "${nacos.test.value}")
     private String testValue;
 
 }

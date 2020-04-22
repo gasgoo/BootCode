@@ -1,3 +1,4 @@
+/*
 package com.api.register.config;
 
 import com.alibaba.nacos.api.annotation.NacosInjected;
@@ -11,10 +12,12 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
+*/
 /**
  * @Date 2020/4/16 14:22
  * @name DiscoveryApp
- */
+ *//*
+
 
 
 @Component
@@ -31,10 +34,12 @@ public class NacosRegisterService {
     @Value("${spring.application.name}")
     private String serverNme;
 
-    /**
+    */
+/**
      * @Description  也可以访问这个接口地址注册 curl -X PUT 'http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=example&ip=127.0.0.1&port=8080'
      * @Date 2020/4/16 14:58
-     **/
+     **//*
+
     @PostConstruct
     public void registerInstance() throws NacosException {
         log.info("nacos服务注册>>>start"+serverNme+":"+serverPort );
@@ -48,3 +53,4 @@ public class NacosRegisterService {
 
 
 }
+*/

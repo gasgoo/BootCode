@@ -2,6 +2,7 @@ package com.example.nacosregister.controller;
 
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.pojo.Instance;
+import com.example.nacosregister.config.NacosConfigCenter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,16 +22,12 @@ import java.util.List;
 public class NacosController {
 
 
+    @Autowired
+    private NacosConfigCenter nacosConfigCenter;
 
-    @RequestMapping(value = "/getInstance", method= RequestMethod.GET)
-    public List<Instance> getInstance(@RequestParam String serviceName) throws NacosException {
-
-        return null;
-    }
-
-   /* @RequestMapping(value = "/queryConfig",method = RequestMethod.GET)
+    @RequestMapping(value = "/queryConfig",method = RequestMethod.GET)
     public String query(){
         log.info("读取的配置中心的value:"+nacosConfigCenter.getTestValue());
         return nacosConfigCenter.getTestValue();
-    }*/
+    }
 }

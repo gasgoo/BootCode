@@ -5,12 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-//@Slf4j
-//@NacosPropertySource(dataId = "nacos-config",autoRefreshed = true)
-public class NacosRegisterApplication {
+public class RegisterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosRegisterApplication.class, args);
+        SpringApplication.run(RegisterApplication.class, args);
     }
 
 }
