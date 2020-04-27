@@ -5,6 +5,7 @@ import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.example.nacosregister.config.NacosConfigCenter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,9 +26,12 @@ public class NacosController {
     @Autowired
     private NacosConfigCenter nacosConfigCenter;
 
+    @Autowired
+    private ServerProperties serverProperties;
+
     @RequestMapping(value = "/queryConfig",method = RequestMethod.GET)
     public String query(){
         log.info("读取的配置中心的value:"+nacosConfigCenter.getTestValue());
-        return nacosConfigCenter.getTestValue();
+        return nacosConfigCenter.getTestValue()+":"+serverProperties.getPort();
     }
 }
