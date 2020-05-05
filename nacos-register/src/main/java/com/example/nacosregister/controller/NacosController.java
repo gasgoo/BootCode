@@ -27,6 +27,7 @@ public class NacosController {
     private ServerProperties serverProperties;
 
     @GetMapping(value = "/queryConfig")
+    @SentinelResource(value = "queryConfig",blockHandler ="限流降级处理" )
     public String query(){
         log.info("读取的配置中心的value:"+nacosConfigCenter.getTestValue());
         System.out.println(Thread.currentThread().getName());
@@ -34,7 +35,7 @@ public class NacosController {
     }
 
     @RequestMapping(value="/sentinel")
-    @SentinelResource("sentinel")
+    @SentinelResource(value = "sentinel",fallback = "Error.500")
     public String index(){
         return "hello sentinel";
     }

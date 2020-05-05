@@ -21,4 +21,11 @@ public class NacosConfigCenter {
     @Value(value = "${nacos.test.value}")
     private String testValue;
 
+    public String getTestValue() {
+        return testValue;
+    }
+
+    public void setTestValue(String testValue) {
+        this.testValue = testValue;
+    }
 }

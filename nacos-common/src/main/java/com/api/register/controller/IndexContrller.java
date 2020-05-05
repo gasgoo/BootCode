@@ -15,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
  * @name IndexContrller
  */
 
-@Slf4j
 @RestController
 @RefreshScope
 public class IndexContrller {

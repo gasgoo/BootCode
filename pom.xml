@@ -16,8 +16,7 @@
     </modules>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
-        <nacos-commmon-version>1.0.0-SNAPSHOT</nacos-commmon-version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -62,14 +61,13 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--sentinel配置持久化的依赖-->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+            <version>1.5.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
+
 
     </dependencies>
 </project>
